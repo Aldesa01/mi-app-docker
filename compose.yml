@@ -17,19 +17,6 @@ services:
     networks:
       - mi-red
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    container_name: contenedorPhpMyAdmin
-    environment:
-      PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: pinacoteca1234
-    ports:
-      - "8081:80"
-    depends_on:
-      - db
-    networks:
-      - mi-red
-
 networks:
   mi-red:
     driver: bridge
